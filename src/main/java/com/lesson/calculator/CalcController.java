@@ -13,25 +13,25 @@ public class CalcController {
         return "Добро пожаловать в калькулятор";
     }
     @GetMapping(path = "/plus")
-    public String plus(@RequestParam int num1, int num2) {
-        int num3=num1+num2;
-        return num1 + "+" + num2 + "=" + num3;
+    public String plus(@RequestParam(name = "num1") int a,@RequestParam(name = "num2") int b) {
+        int c=a+b;
+        return a + "+" + b + "=" + c;
     }
     @GetMapping(path = "/minus")
-    public String minus(@RequestParam int num1, int num2) {
-        int num3=num1-num2;
-        return num1 + "-" + num2 + "=" + num3;
+    public String minus(@RequestParam(name = "num1") int a,@RequestParam(name = "num2") int b) {
+        int c=a-b;
+        return a + "-" + b + "=" + c;
     }
     @GetMapping(path = "/multiply")
-    public String multiply(@RequestParam int num1, int num2) {
-        int num3=num1*num2;
-        return num1 + "*" + num2 + "=" + num3;
+    public String multiply(@RequestParam(name = "num1") int a,@RequestParam(name = "num2") int b) {
+        int c=a*b;
+        return a + "*" + b + "=" + c;
     }
     @GetMapping(path = "/divide")
-    public String divide(@RequestParam double num1, double num2) {
-        double num3=num1/num2;
-        if (num2 == 0) {
+    public String divide(@RequestParam(name = "num1") double a,@RequestParam(name = "num2") double b) {
+        double c=a/b;
+        if (b == 0) {
             return  "Делить на ноль нельзя!";
-        } else return num1 + "/" + num2 + "=" + num3;
+        } else return a + "/" + b + "=" + c;
     }
 }
