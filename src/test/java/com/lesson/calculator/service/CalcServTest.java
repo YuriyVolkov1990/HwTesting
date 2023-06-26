@@ -7,7 +7,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class CalcServTest {
-
      CalcService calc = new CalcServiceImpl();
      @Test
     void sumPositive(){

@@ -4,8 +4,6 @@ import com.lesson.calculator.exceptions.DivisionByZeroException;
 import com.lesson.calculator.service.CalcService;
 import org.springframework.stereotype.Service;
 
-import java.security.DigestException;
-
 @Service
 public class CalcServiceImpl implements CalcService {
     @Override
