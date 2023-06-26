@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/calculator")
 public class CalcController {
     public final CalcService calculator;
-
     public CalcController(CalcService calculator) {
         this.calculator = calculator;
     }
