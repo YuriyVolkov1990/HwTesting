@@ -1,4 +1,4 @@
-package com.lesson.calculator;
+package com.lesson.calculator.service;
 
 
 public interface CalcService {
